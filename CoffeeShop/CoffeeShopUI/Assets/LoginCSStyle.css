@@ -1,0 +1,172 @@
+﻿/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Economica|Ubuntu|Ubuntu+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Advent+Pro|Allura|Amatic+SC|Bad+Script|Calligraffitti|Caveat|Cinzel|Clicker+Script|Comfortaa|Cookie|Dancing+Script|Dosis|Economica|Expletus+Sans|Great+Vibes|Handlee|Julius+Sans+One|Jura|Kaushan+Script|Khand|Lemonada|Marck+Script|Megrim|Oleo+Script|Petit+Formal+Script|Pompiere|Rajdhani|Sacramento|Shrikhand|Wire+One');
+/*Font Sonu*/
+
+.error-messageStyle
+{
+
+    position: relative;
+     text-align: center;
+    line-height: 30px;
+    border:none;
+    border-radius:10px;
+    margin:0 auto;
+    text-align:center;
+
+    line-height:22px;
+    width:300px;
+    height:25px;
+     background:linear-gradient(#FC8543,#D75F5A);
+    /*background:rgba(255, 123, 0, 0.19);*/
+    color:white;
+    box-shadow: 5px 10px 15px 0px rgba(0,0,0,0.1);
+
+}
+
+
+/*Buttonumuz için*/
+.pulse-button {
+    position: relative;
+    font-size: 17px;
+    font-family: 'Noto Serif', serif;
+    text-align: right;
+    line-height: 30px;
+    color: #ff7b00;
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgba(255, 123, 0, 0.11);
+    -webkit-animation: pulse 1.5s infinite;
+}
+
+    .pulse-button:hover {
+        -webkit-animation: none;
+    }
+
+@-webkit-keyframes pulse {
+    0% {
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    70% {
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        box-shadow: 0 0 0 50px rgba(255, 123, 0, 0);
+    }
+
+    100% {
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(255, 123, 0, 0);
+    }
+}
+/*Button Sonu*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#pixie {
+    position: fixed;
+    background-color: #164979;
+    width: 100%;
+    height: 100%;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2A2424', endColorstr='#91684A', GradientType=0);
+    /* IE10+ */
+    background: -webkit-gradient(linear, center top, center bottom, from(#2A2424), to(#91684A));
+    /* Chrome, Safari 4+ */
+    background: -webkit-linear-gradient(center top, #2A2424, #91684A) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+    background: -moz-linear-gradient(center top, #2A2424, #91684A) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    /* Firefox 3.6-15 */
+    background: -o-linear-gradient(center top, #2A2424, #91684A) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    /* Opera 11.10-12.00 */
+    background: linear-gradient(center top, #2A2424, #91684A) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+    margin: 0;
+    padding: 0;
+}
+
+#container_login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+#form_box {
+    background: rgba(0, 0, 0, 0.5);
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+}
+/*OklavaCoffee için yazımı için*/
+form h1 {
+    /*     font-family: 'Clicker Script', cursive; */
+    color: #ff7b00;
+    padding: 15px 0 0 10px;
+    font-weight: 100;
+    font-size: 2.5em;
+    font-family: 'Megrim', cursive;
+}
+
+    form h1 > span {
+        font-family: 'Clicker Script', cursive;
+        font-size: 70%;
+    }
+
+/*#form_heading {
+            color: #ff7b00;
+            padding: 15px 0 0 10px;
+            font-family: 'Raleway', 'arial';
+            font-weight: 100;
+            font-size: 1.5em;
+        }*/
+
+
+input {
+    background: none;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    /*-ms-transition: all 0.30s ease-in-out;*/
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #DDDDDD;
+    color: white;
+    font-family: 'Raleway', 'arial';
+    font-weight: 100;
+    font-size: 17px;
+}
+
+    input:focus {
+        box-shadow: 0 0 10px rgba(255, 123, 0, 1);
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid rgba(255, 123, 0, 1);
+    }
+
+    input[type=submit]:hover {
+        cursor: pointer;
+    }
+
+a {
+    text-decoration: none;
+    color: antiquewhite;
+    cursor: pointer;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }

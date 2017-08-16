@@ -1,0 +1,11 @@
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\DataAccessLayer\bin\Debug\Entities.dll
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\DataAccessLayer\bin\Debug\Entities.pdb
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

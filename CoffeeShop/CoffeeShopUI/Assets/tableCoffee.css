@@ -1,0 +1,40 @@
+﻿body {
+    background-image: linear-gradient(to left, #2A2424 1%, #91684A 100%);
+}
+
+         .reservation-table {
+            display:inline-block;
+            position: absolute;
+            height: 60px;
+            width: 60px;
+            border: 3px solid #f89595;
+            border-radius: 10px;
+            background-image: linear-gradient(to bottom, #F0B7A1 0%, #BF6E4E 100%);
+        }
+
+        .table-number {
+            font-size: 25px;
+            margin: 10px 20px;
+        }
+
+        .testdenemetablecoffee{
+            border:3px solid transparent;
+            margin:40px auto;
+            height:500px;
+            width:500px;
+            
+        }
+
+
+        .testdenemetablecoffee h2 {
+        position: relative;
+        text-align: center;
+        font-size: 85px;
+        color: #2A2424;
+    }
+
+        .testdenemetablecoffee h2:hover {
+            /*   text-shadow: -5px -5px 5px ; */
+            letter-spacing: 10px;
+            cursor: pointer;
+        }

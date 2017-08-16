@@ -1,0 +1,11 @@
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\BusinessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\BusinessLayer\bin\Debug\Entities.dll
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\BusinessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\BusinessLayer\bin\Debug\Entities.pdb
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\BusinessLayer\bin\Debug\EntityFramework.xml
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\BusinessLayer\obj\Debug\BusinessLayer.pdb

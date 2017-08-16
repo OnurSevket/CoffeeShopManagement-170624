@@ -1,0 +1,64 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Kullanıcı Girişi</title>
+    <link href="~/Assets/LoginCSStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <canvas id="pixie"></canvas>
+    <div class="container"></div>
+    <script src="https://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <form action="~/Login/Index" method="post">
+        <div id="container_login">
+            @*<div class="error-messageStyle">TestDeneme</div>*@
+
+            <div id="form_box">
+               
+                    <h1>Oklava<span>Coffee</span></h1>
+
+                    <input type="text" name="username" placeholder="Kullanıcı Adı"><br />
+
+                    <input type="password" name="password" placeholder="Şifre"><br />
+
+                    <input type="checkbox" name="rememberMe" id="checkbox"><label for="checkbox" style="color:white; font-size:15px;">Hatırla Beni</label><br />
+                <div style="display:none" id="error-message" class="error-messageStyle">
+                    @ViewBag.ErrorMessage
+                </div> 
+                    <input type="submit" class="pulse-button" value="Giriş Yap"><br />
+                @*Şifremi Unuttum'a tıklandığı zaman Mail adresi girilmesi istenip yöneticeye Mail gönderilebilir*@
+                    <a style="font-size: 15px">Şifremi Unuttum</a><br /><br />
+                                         
+            </div>      
+        </div>
+        
+    </form>
+
+    <script>
+ 
+        $(document).ready(
+        
+            function () {
+                if ($("#error-message").text() != " ") {
+                    $("#error-message").slideDown();
+                    setTimeout(
+
+                        function () {
+                            $("#error-message").slideUp();
+                        }, 5000);
+                }
+               
+            }
+        )
+    </script>
+
+
+    <script src="~/Assets/LoginScript.js"></script>
+</body>
+</html>

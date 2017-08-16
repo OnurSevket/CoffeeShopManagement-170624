@@ -1,0 +1,74 @@
+EMÝR
+Sorunu Hallettim{ONUR}
+
+	1-Emir-Masa {Masa kiþi sayýsý limiti}
+	2-Onur-Menü
+	3-Erdem-Check
+
+
+
+ERDEM
+base repository'e sqlContext eklenince ctorla eklenecek.
+
+
+
+ONUR
+{
+													\\README//
+			{
+
+			YAPILANLAR----
+			//***//User,Title,gender,tablestatus,table,Check,CheckOrder,Order Mapleri tamamlandý ve diðer maplardeki düzeltilmeler yapýldý.
+			//***//Migration oluþturuldu.Database oluþtu
+		    //***//SqlContext,Base Repository tamamlandý
+			//***//Repository classlar oluþturulup tamamlandý
+			//***//IBusiness tamamlandý	
+			//***//LoginPage Tasarý tamamlandý.
+			//**//(Hata Messajý güzel gözümüyor ona ayar cekeceðim)Login Page tamamlandý()
+
+			//**//Masalar Javascript ile oluþturuldu dynamic þekilde
+			-----------------------------------------------------------------------------------------------
+			YAPILACAKLAR----			
+				//**//DAL'da Migration'da Seed ile database'e veriler doldurulacak{not:Sadece Login için doldurdum}
+				
+				//**//Tablo isimleri çoðul geliyor SqlContext'e pluraasdasd... yapmak lazým.Zaman kalýrsa hallederiz 
+
+				//**// Razor ile database den gelen masa numaralarý ile masalarýn oluþtrulmasý
+
+				//**// Yine ayný þekilde Ürünlerin Razor ile oluþturulmasý
+
+				Yol Haritasý---
+		    -----------------------------------------------------------------------------------------
+			1-Bizim HomePage imizde iki tane Buttonmuz Var.Birisi Masalarý Gösterecek.
+
+			2-Masalarý herkes görebilir Fakat Kasiyer bir masaya týkladýðýmýz zaman Kasa Fiþi gözükecek.
+			Eðer Garson týklarsa Ürün seçimi ekraný gelecek.
+
+			Peki bunu nasýl yaparýz?
+			  1-Attirubute yazýlýcak Koþulumuz title ID ye göre sayfalara yönlendireceðiz
+
+		
+
+			-------------------------------------------------------------------------------------------
+			YAPILIYOR -----
+
+				//**// Login olduktan sonra isim soyisim yazan yere partial hazýrlýyorum
+
+				//*Not*//Kafamdaki tasarým oluþtu Layout Hazýrlýyorum UI da uðraþýyorum.
+
+			---------------------------------------------------------------------------------------------
+			Sýkýntýlar----
+			//**//Login Sayfasýnda sayfa ilk açýldýðýnda hata mesajý boþ bi geliyor açýlmamasý lazým
+
+			//**//
+
+			//**//
+
+			//**//
+			
+			//**//
+
+			}
+}
+
+

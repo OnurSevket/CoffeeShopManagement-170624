@@ -1,0 +1,4 @@
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\Entities\bin\Debug\Entities.dll
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\Entities\bin\Debug\Entities.pdb
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\Entities\obj\Debug\Entities.dll
+C:\Users\Onur\Desktop\CoffeeManagementTFS\CoffeeShop\Entities\obj\Debug\Entities.pdb

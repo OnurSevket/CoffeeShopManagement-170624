@@ -1,0 +1,296 @@
+﻿@model CoffeeShopUI.Models.ViewModel.GenderTitle
+
+@{
+
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" href="#employee" role="tab" data-toggle="tab">Çalışanlar</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#product" role="tab" data-toggle="tab">Ürünler</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#supplier" role="tab" data-toggle="tab">Tedarikçiler</a>
+    </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="employee">
+        <div id="list">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>İsim</th>
+                        <th>Soyisim</th>
+                        <th>E-Mail</th>
+                        <th>Doğum Tarihi</th>
+                        <th>KullanıcıAdı</th>
+                        <th>Şİfre</th>
+                        <th>Cinsiyet</th>
+                        <th>Ünvan</th>
+                        <th>#</th>
+                    </tr>
+                </thead>
+                <tbody id="myTbodyUser"></tbody>
+            </table>
+        </div>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#emp">Yeni Çalışan</button>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="product">
+        <div id="list">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>İsim</th>
+                        <th>Fiyat</th>
+                    </tr>
+                </thead>
+                <tbody id="myTbody"></tbody>
+            </table>
+        </div>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#prd">Yeni Ürün</button>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="supplier">
+        <div id="list">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Şirket</th>
+                        <th>İrtibat</th>
+                        <th>Phone</th>
+                        <th>E-Mail</th>
+                    </tr>
+                </thead>
+                <tbody id="myTbody"></tbody>
+            </table>
+        </div>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#sup">Yeni Tedarikçi</button>
+    </div>
+</div>
+
+<!--Çalışan Modal-->
+<div id="emp" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!--Content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Çalışan işlem</h4>
+            </div>
+            <div class="modal-body">
+                <form id="frmEmployee">
+                    <div class="formEmployee" style="display:none">
+                        <label for="txtID">ID</label>
+                        <input type="text" placeholder="ID" id="txtID" class="form-control" />
+                    </div>
+                    <div class="formEmployee">
+                        <label for="txtFirstName">İsim</label>
+                        <input type="text" placeholder="İsim" id="txtFirstName" class="form-control" />
+                    </div>
+                    <div class="formEmployee">
+                        <label for="txtLastName">Soyisim</label>
+                        <input type="text" placeholder="Soyisim" id="txtLastName" class="form-control" />
+                    </div>
+                    <div id="formEmployee">
+                        <label for="txtEmail">Email</label>
+                        <input type="email" placeholder="Email" id="txtEmail" class="form-control" />
+                    </div>
+                    <div id="formEmployee">
+                        <label for="txtDateOfBirth">Doğum Tarihi</label>
+                        <input type="text" placeholder="Doğum Tarihi" id="txtDateOfBirth" class="form-control" />
+                    </div>
+                    <div id="formEmployee">
+                        <label for="txtUserName">Kullanıcı Adı</label>
+                        <input type="text" placeholder="Kullanıcı Adı" id="txtUserName" class="form-control" />
+                    </div>
+                    <div id="formEmployee">
+                        <label for="txtPassword">Şifre</label>
+                        <input type="password" placeholder="Şifre" id="txtPassword" class="form-control" />
+                    </div>
+                    <div id="formEmployee">
+                        <label for="cmbGender">Cinsiyet</label>
+
+                        @Html.DropDownListFor(g => g.Genders, new SelectList(Model.Genders, "ID", "Name"), new { @id = "cmbGender" })
+
+                    </div>
+                    <div id="formEmployee">
+                        <label for="cmbTitle">Ünvan</label>
+                        @Html.DropDownListFor(t => t.Titles, new SelectList(Model.Titles, "ID", "Name"), new { @id = "cmbTitle" })
+
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Kapat
+                </button>
+                <button id="btnAddUser" type="button" class="btn btn-default" onclick="AddUser()">
+                    Ekle
+                </button>
+                <button id="btnUpdateUser" type="button" class="btn btn-default" onclick="UpdateUser()" style="display:none;">Güncelle</button>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+<script>
+   
+    $(document).ready(
+            function () {
+                GetAllUser();
+            }
+            );
+    function AddUser() {
+        debugger;
+        $.ajax({
+            url: "/Manager/AddUser",
+            data: {
+                ID: $("#txtID").val(),
+                FirstName: $("#txtFirstName").val(),
+                LastName: $("#txtLastName").val(),
+                Email: $("#txtEmail").val(),
+                DateOfBirth: $("#txtDateOfBirth").val(),
+                UserName: $("#txtUserName").val(),
+                Password: $("#txtPassword").val(),
+                GenderID: $("#cmbGender option:selected").val(),
+                TitleID: $("#cmbTitle option:selected").val()
+            },
+            type: "get",
+            contentType: "application/json;charset=utf-8", // Verinin hangi tipte yollacağı
+            dataType: "json",
+            success: function (result) {
+                alert(result);
+                GetAllUser();
+            },
+            error: function (result) {
+                alert(result);
+                alert("Hata");
+            }
+        })
+    }
+
+    function GetAllUser() {
+      
+        $.ajax({
+            url: "@Url.Action("ListUser","Manager")",
+            type: "get",
+            contentType: "application/json;charset=utf-8", // Verinin hangi tipte yollacağı
+            dataType: "json",
+            success: function (result) {
+                debugger;
+                var html;
+                $.each(result, function (index, item) {
+                    html += '<tr>';
+                    html += '<td>' + item.ID + '</td>';
+                    html += '<td>' + item.FirstName + '</td>';
+                    html += '<td>' + item.LastName + '</td>';
+                    html += '<td>' + item.Email + '</td>';
+                    html += '<td>' + item.DateOfBirth + '</td>';
+                    html += '<td>' + item.UserName + '</td>';
+                    html += '<td>' + item.Password + '</td>';
+                    html += '<td>' + item.GenderName + '</td>';
+                    html += '<td>' + item.TitleName + '</td>';
+                    html += '<td><a href="#" class="btn btn-default btn-xs" onclick="GetUserById(' + item.ID + ')" data-toggle="modal" data-target="#emp">Güncelle</a> &empty; <a href="#" onclick="DeleteUser(' + item.ID + ')" class="btn btn-default btn-xs" data-toggle="modal" data-target="#emp">Sil</a>' + '</td>';
+                    html += '</tr>'
+                })
+                $('#myTbodyUser').html(html);
+                console.log(result);
+            },
+            error: function (hata) {
+                console.log(hata);
+                //alert(hata);
+            }
+
+
+        })
+
+    }
+
+    function GetUserById(id) {
+        $('#btnUpdateUser').show();
+        $('#btnAddUser').hide();
+
+        $.ajax({
+            url: "/Manager/GetUserById/" + id,
+            type: "get",
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                $('#txtID').val(result.ID);
+                $('#txtFirstName').val(result.FirstName);
+                $('#txtLastName').val(result.LastName);
+                $('#txtEmail').val(result.Email);
+                $("#txtDateOfBirth").val(result.DateOfBirth);
+                $("#txtUserName").val(result.UserName);
+                $("#txtPassword").val(result.Password);
+                //Cinsiyet ile Ünvan seçili Nasıl gelebilir? Araştır !!!
+            },
+            error: function () {
+
+            }
+
+        })
+
+
+    }
+
+    function UpdateUser() {
+        //debugger;
+        var student = {
+            ID: $("#txtID").val(),
+            FirstName: $("#txtFirstName").val(),
+            LastName: $("#txtLastName").val(),
+            Email: $("#txtEmail").val(),
+            DateOfBirth: $("#txtDateOfBirth").val(),
+            UserName: $("#txtUserName").val(),
+            Password: $("#txtPassword").val(),
+            GenderID: $("#cmbGender").find('option:selected').val(),
+            TitleID: $("#cmbTitle").find('option:selected').val()
+        }
+
+        $.ajax({
+            url: "/Manager/UpdateUser",
+            type: "post",
+            data: JSON.stringify(student),
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                alert(result + " Güncelleme başarılı");
+                GetAllUser();
+            },
+            error: function () {
+                alert("Hata !");
+            }
+        })
+
+    }
+
+    function DeleteUser(id) {
+        $.ajax({
+            url: "/Manager/DeleteUser/" + id,
+            type: "post",
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                alert(result);
+                GetAllUser();
+            },
+            error: function () {
+                alert("Hata !");
+            }
+        })
+
+    }
+</script>
